@@ -1,0 +1,12 @@
+{
+  "LoginDataTest": {
+    "validUser": {
+      "username": "standard_user",
+      "password": "secret_sauce"
+    },
+    "invalidUser": {
+      "username": "admin",
+      "password": "12345678"
+    }
+  }
+}
