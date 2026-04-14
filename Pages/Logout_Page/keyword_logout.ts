@@ -18,10 +18,6 @@ export class LogoutPageKeywords extends BasePage {
   }
 
     async logout(): Promise<void> {
-         await this.LogoutPageElements.burger_btn.waitFor({ state: 'visible', timeout: 10000 });
-         await this.LogoutPageElements.burger_btn.click();
-       
-
         await this.LogoutPageElements.logout_btn.waitFor({ state: 'visible', timeout: 10000 });
         await this.LogoutPageElements.logout_btn.click();
     

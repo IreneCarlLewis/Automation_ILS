@@ -9,9 +9,9 @@ export class LoginPageElements {
 
     constructor(private readonly page: Page) { 
 
-        this.username_field = page.locator("#user-name");
-        this.password_field = page.locator("#password");
-        this.login_button = page.locator("#login-button");
+        this.username_field = page.locator("//input[@placeholder='firstName.lastName@Compdomain']");
+        this.password_field = page.locator("//input[@placeholder='Your Password']");
+        this.login_button = page.locator("//button[normalize-space(text())='LOG IN']");
 
     }
 

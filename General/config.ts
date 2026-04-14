@@ -3,10 +3,10 @@
  */
 export const config = {
   // URL dasar aplikasi
-  baseUrl: 'https://www.saucedemo.com/',
+  baseUrl: 'https://stgils.kalbe.co.id/',
   
   // Domain untuk cookie
-  cookieDomain: 'saucedemo.com',
+  // cookieDomain: 'saucedemo.com',
   
   // Konfigurasi autentikasi
   auth: {

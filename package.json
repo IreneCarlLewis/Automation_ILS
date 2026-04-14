@@ -1,22 +1,26 @@
 {
-  "name": "saucedemo-run",
+  "name": "automation_ils",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {},
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/IreneCarlLewis/Automation_ILS#readme",
+  "bugs": {
+    "url": "https://github.com/IreneCarlLewis/Automation_ILS/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/faizsatria/saucedemo-run.git"
+    "url": "git+https://github.com/IreneCarlLewis/Automation_ILS.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/faizsatria/saucedemo-run/issues"
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
   },
-  "homepage": "https://github.com/faizsatria/saucedemo-run#readme",
-  "description": "",
+  "scripts": {},
   "devDependencies": {
-    "@playwright/test": "^1.58.1",
+    "@playwright/test": "^1.59.1",
     "@types/node": "^25.2.0"
   }
 }

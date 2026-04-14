@@ -1,8 +1,8 @@
 {
   "LoginDataTest": {
-    "validUser": {
-      "username": "standard_user",
-      "password": "secret_sauce"
+    "requestor": {
+      "username": "bianca.cheung@kalbe.co.id",
+      "password": "Kalbefarm4"
     },
     "invalidUser": {
       "username": "admin",
