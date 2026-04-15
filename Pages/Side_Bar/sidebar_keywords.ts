@@ -17,6 +17,22 @@ export class SideBarKeywords extends BasePage {
         await this.gotoBase();
     }
 
+    async openRequest(): Promise<void> {
+        await this.SideBarElements.request_menu.waitFor({ state: 'visible', timeout: 5000 });
+        await this.SideBarElements.request_menu.click();
+        await this.page.waitForTimeout(1000);
+    }
+
+    async openAgreement(): Promise<void> {
+        await this.SideBarElements.request_menu.waitFor({ state: 'visible', timeout: 5000 });
+        await this.SideBarElements.request_menu.click();
+        await this.page.waitForTimeout(1000);
+
+        await this.SideBarElements.agreement_menu.waitFor({ state: 'visible', timeout: 5000 });
+        await this.SideBarElements.agreement_menu.click();
+        await this.page.waitForTimeout(1000);
+    }
+
     async openAllMasterModules(): Promise<void> {
 
         await this.SideBarElements.automation_menu.waitFor({ state: 'visible', timeout: 5000 });
@@ -25,7 +41,7 @@ export class SideBarKeywords extends BasePage {
         await this.SideBarElements.request_menu.waitFor({ state: 'visible', timeout: 5000 });
         await this.SideBarElements.request_menu.click();
 
-        
+
     }
 
 };

@@ -22,8 +22,8 @@ export class RequestAgreementElements {
     constructor(private readonly page: Page) {
 
         //this.Create_Button = page.locator("//button[normalize-space(text())='Create']");
-        this.create_new_agreement_button = page.locator("(//button[contains(@class,'btn btn-primary')]//i)[1]");
-        this.sbu_for_approval_toggle = page.locator("//div[@id='sbuForApproval']//input");
+        this.create_new_agreement_button = page.locator("(//button[contains(@class,'btn btn-primary')])[1]");
+        this.sbu_for_approval_toggle = page.locator("(//input[@class='select-dropdown form-control'])[1]");
         // this.sbu_for_approval_kalbe = page.locator("//label[normalize-space(text())='Kalbe']");
         // this.sbu_for_approval_finus = page.locator("//label[normalize-space(text())='Finus']");
         // this.sbu_for_approval_dankos = page.locator("//label[normalize-space(text())='Dankos']");
