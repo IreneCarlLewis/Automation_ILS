@@ -1,7 +1,7 @@
-import { LoginPageKeywords } from "../Login_Page/keyword_login";
+import { LoginPageKeywords } from "../../Login_Page/keyword_login";
 import { expect } from "playwright/test";
 import { RequestAgreementElements } from "./req_agreement_elements";
-import { BasePage } from "../../Fixture/basePage";
+import { BasePage } from "../../../Fixture/basePage";
 
 
 export class RequestAgreementKeywords extends BasePage {
