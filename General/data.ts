@@ -1,4 +1,4 @@
-import * as testlogin from "./testlogin.json"
+import * as testlogin from "./credentials.json"
 
 export default {
     ...testlogin
