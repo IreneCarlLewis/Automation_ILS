@@ -1,6 +1,7 @@
 import { BasePage } from "../../Fixture/basePage";
 import data from "../../General/data";
 import { LoginPageElements } from "./element_login";
+import { expect } from "@playwright/test";
 
 export class LoginPageKeywords extends BasePage {
     readonly LoginPageElements: LoginPageElements;
@@ -27,6 +28,9 @@ export class LoginPageKeywords extends BasePage {
         
         await this.LoginPageElements.login_button.waitFor({ state: 'visible', timeout: 5000 });
         await this.LoginPageElements.login_button.click();
+
+        await expect(this.page.locator("//h3[normalize-space(text())='My Task']")).toBeVisible({ timeout: 5000 });
+        
     
 
   }
