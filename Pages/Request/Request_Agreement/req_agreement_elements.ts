@@ -14,7 +14,17 @@ export class RequestAgreementElements {
     readonly save_button: Locator;
     readonly submit_button: Locator;
     readonly search_sbu: Locator;
-
+    readonly add_partner: Locator;
+    readonly partner_field: Locator;
+    readonly add_partner_button: Locator;
+    readonly NOA_field: Locator;
+    readonly duration: Locator;
+    readonly duration_toggle: Locator;
+    readonly other_notes: Locator;
+    readonly add_territory: Locator;
+    readonly territory_type: Locator;
+    readonly territory_name: Locator;
+    readonly add_button: Locator;
 
 
     constructor(private readonly page: Page) {
@@ -30,6 +40,19 @@ export class RequestAgreementElements {
         this.save_button = page.locator("//button[normalize-space(text())='Save']");
         this.submit_button = page.locator("//button[normalize-space(text())='Submit']");
         this.search_sbu = page.locator("(//input[@placeholder='Search here..'])[1]");
+        this.add_partner = page.locator("(//button[contains(@class,'btn btn-primary-dark')])[2]");
+        this.partner_field = page.locator("(//label[normalize-space(text())='Partner']/following::input)[1]");
+        this.add_partner_button = page.locator("(//button[contains(@class,'btn btn-warning')])[3]");
+        this.NOA_field = page.locator("//body[@data-select2-id='15']");
+        this.duration = page.locator("//input[@aria-describedby='OtherAgreement_Duration2New-error']");
+        this.duration_toggle = page.getByText("Choose");
+        this.other_notes = page.locator("//textarea[@name='OtherAgreement_OthersNew']");
+        this.add_territory = page.locator("(//button[contains(@class,'btnAddTerritory btn')])[3]");
+        this.territory_type = page.locator("//label[normalize-space(text())='Country']");
+        this.territory_name = page.locator("(//input[@aria-required='true'])[2]");
+        this.add_button = page.locator("(//button[contains(@class,'btn btn-save-territory')])[1]");
+
+
     }
 
 

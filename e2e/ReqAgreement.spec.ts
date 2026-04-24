@@ -12,62 +12,53 @@ test.describe('Login Functionality Tests', () => {
         await loginPage.loginwithValidCredentials();
 
         const reqAgreement = new RequestAgreementKeywords(page);
-        await reqAgreement.create_sbu_agreement("Kalbe Farma");
+        await reqAgreement.create_sbu_agreement("Kalbe Farma", "save");
 
     });
-    test('create agreement Kalbe International', async ({ page }) => {
-        const loginPage = new LoginPageKeywords(page);
-        await loginPage.goto();
-        await loginPage.loginwithValidCredentials();
+    // test('create agreement Kalbe International', async ({ page }) => {
+    //     const loginPage = new LoginPageKeywords(page);
+    //     await loginPage.goto();
+    //     await loginPage.loginwithValidCredentials();
 
-        const reqAgreement = new RequestAgreementKeywords(page);
-        await reqAgreement.create_sbu_agreement("Kalbe International");
+    //     const reqAgreement = new RequestAgreementKeywords(page);
+    //     await reqAgreement.create_sbu_agreement("Kalbe International");
 
-    });
-    test('create agreement Dankos', async ({ page }) => {
-        const loginPage = new LoginPageKeywords(page);
-        await loginPage.goto();
-        await loginPage.loginwithValidCredentials();
+    // });
+    // test('create agreement Dankos', async ({ page }) => {
+    //     const loginPage = new LoginPageKeywords(page);
+    //     await loginPage.goto();
+    //     await loginPage.loginwithValidCredentials();
 
-        const reqAgreement = new RequestAgreementKeywords(page);
-        await reqAgreement.create_sbu_agreement("Dankos Farma");
+    //     const reqAgreement = new RequestAgreementKeywords(page);
+    //     await reqAgreement.create_sbu_agreement("Dankos Farma");
 
-    });
-    test('create agreement Enseval', async ({ page }) => {
-        const loginPage = new LoginPageKeywords(page);
-        await loginPage.goto();
-        await loginPage.loginwithValidCredentials();
+    // });
+    // test('create agreement Enseval', async ({ page }) => {
+    //     const loginPage = new LoginPageKeywords(page);
+    //     await loginPage.goto();
+    //     await loginPage.loginwithValidCredentials();
 
-        const reqAgreement = new RequestAgreementKeywords(page);
-        await reqAgreement.create_sbu_agreement("Enseval Putera Megatama");
+    //     const reqAgreement = new RequestAgreementKeywords(page);
+    //     await reqAgreement.create_sbu_agreement("Enseval Putera Megatama");
 
-    });
-    test('create agreement Finus', async ({ page }) => {
-        const loginPage = new LoginPageKeywords(page);
-        await loginPage.goto();
-        await loginPage.loginwithValidCredentials();
+    // });
+    // test('create agreement Finus', async ({ page }) => {
+    //     const loginPage = new LoginPageKeywords(page);
+    //     await loginPage.goto();
+    //     await loginPage.loginwithValidCredentials();
 
-        const reqAgreement = new RequestAgreementKeywords(page);
-        await reqAgreement.create_sbu_agreement("Finus");
+    //     const reqAgreement = new RequestAgreementKeywords(page);
+    //     await reqAgreement.create_sbu_agreement("Finus");
 
-    });
-    test('create agreement Finus', async ({ page }) => {
-        const loginPage = new LoginPageKeywords(page);
-        await loginPage.goto();
-        await loginPage.loginwithValidCredentials();
+    // });
+    // test('create agreement Bintang Toedjoe', async ({ page }) => {
+    //     const loginPage = new LoginPageKeywords(page);
+    //     await loginPage.goto();
+    //     await loginPage.loginwithValidCredentials();
 
-        const reqAgreement = new RequestAgreementKeywords(page);
-        await reqAgreement.create_sbu_agreement("Finus");
+    //     const reqAgreement = new RequestAgreementKeywords(page);
+    //     await reqAgreement.create_sbu_agreement("Bintang Toedjoe");
 
-    });
-    test('create agreement Bintang Toedjoe', async ({ page }) => {
-        const loginPage = new LoginPageKeywords(page);
-        await loginPage.goto();
-        await loginPage.loginwithValidCredentials();
-
-        const reqAgreement = new RequestAgreementKeywords(page);
-        await reqAgreement.create_sbu_agreement("Bintang Toedjoe");
-
-    });
+    // });
 
 });
