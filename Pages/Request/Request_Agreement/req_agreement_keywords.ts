@@ -3,6 +3,7 @@ import { expect } from "playwright/test";
 import { RequestAgreementElements } from "./req_agreement_elements";
 import { SideBarKeywords } from "../../Side_Bar/sidebar_keywords";
 import { BasePage } from "../../../Fixture/basePage";
+import * as path from 'path';
 
 
 
@@ -81,20 +82,13 @@ export class RequestAgreementKeywords extends BasePage {
         await this.page.keyboard.press('Enter');
         await this.RequestAgreementElements.add_button.click();
 
-        // await this.MOMPageElements.addAttachment_button.click();
-        // const filePath = path.resolve(process.cwd(), 'Assets', 'MoM_Template.xlsx');
-        // console.log(filePath);
-        // const fileInput = this.page.locator('input[type="file"]');
-        // await fileInput.setInputFiles(filePath);
-
-        await 
+        
 
         await this.RequestAgreementElements.duration.waitFor({ state: 'visible', timeout: 10000 });
         await this.RequestAgreementElements.duration.fill("1");
 
         await this.RequestAgreementElements.duration_toggle.waitFor({ state: 'visible', timeout: 10000 });
-        await this.RequestAgreementElements.duration_toggle.click();
-        await this.page.keyboard.press('Enter');
+        await this.RequestAgreementElements.duration_toggle.selectOption('Year(s)');
 
         await this.RequestAgreementElements.other_notes.waitFor({ state: 'visible', timeout: 10000 });
         await this.RequestAgreementElements.other_notes.fill("Test QA - Automated");
@@ -111,6 +105,35 @@ export class RequestAgreementKeywords extends BasePage {
 
         await this.RequestAgreementElements.add_button.waitFor({ state: 'visible', timeout: 10000 });
         await this.RequestAgreementElements.add_button.click();
+
+        await this.RequestAgreementElements.attachment_toggle.click();
+
+        await this.RequestAgreementElements.attachment_toggle.waitFor({ state: 'visible', timeout: 10000 });
+        await this.RequestAgreementElements.attachment_toggle.click();
+
+        await this.RequestAgreementElements.edit_certificate.waitFor({ state: 'visible', timeout: 10000 });
+        await this.RequestAgreementElements.edit_certificate.click();
+
+        const filePath = path.resolve(process.cwd(), 'Assets', 'dummytext.txt');
+        const fileInput = this.RequestAgreementElements.choose_file_attatchment;
+        await fileInput.setInputFiles(filePath);
+        await this.RequestAgreementElements.save_attachment.click();
+
+        await this.RequestAgreementElements.edit_ID_card.waitFor({ state: 'visible', timeout: 10000 });
+        await this.RequestAgreementElements.edit_ID_card.click();
+
+        const filePath2 = path.resolve(process.cwd(), 'Assets', 'dummytext.txt');
+        const fileInput2 = this.RequestAgreementElements.choose_file_attatchment;
+        await fileInput2.setInputFiles(filePath2);
+        await this.RequestAgreementElements.save_attachment.click();
+
+        await this.RequestAgreementElements.edit_article.waitFor({ state: 'visible', timeout: 10000 });
+        await this.RequestAgreementElements.edit_article.click();
+
+        const filePath3 = path.resolve(process.cwd(), 'Assets', 'dummytext.txt');
+        const fileInput3 = this.RequestAgreementElements.choose_file_attatchment;
+        await fileInput3.setInputFiles(filePath3);
+        await this.RequestAgreementElements.save_attachment.click();
 
         if (agreementType.toLowerCase() === 'save') {
             await this.RequestAgreementElements.save_button.waitFor({ state: 'visible', timeout: 5000 });

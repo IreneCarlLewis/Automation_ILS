@@ -9,7 +9,7 @@ test.describe('Login Functionality Tests', () => {
     test('create agreement Kalbe', async ({ page }) => {
         const loginPage = new LoginPageKeywords(page);
         await loginPage.goto();
-        await loginPage.loginwithValidCredentials();
+        // await loginPage.loginwithValidCredentials();
 
         const reqAgreement = new RequestAgreementKeywords(page);
         await reqAgreement.create_sbu_agreement("Kalbe Farma", "save");

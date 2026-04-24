@@ -25,6 +25,13 @@ export class RequestAgreementElements {
     readonly territory_type: Locator;
     readonly territory_name: Locator;
     readonly add_button: Locator;
+    readonly edit_certificate: Locator;
+    readonly edit_ID_card: Locator;
+    readonly edit_article: Locator;
+    readonly choose_file_attatchment: Locator;
+    readonly save_attachment: Locator;
+    readonly attachment_toggle: Locator;
+
 
 
     constructor(private readonly page: Page) {
@@ -42,17 +49,21 @@ export class RequestAgreementElements {
         this.search_sbu = page.locator("(//input[@placeholder='Search here..'])[1]");
         this.add_partner = page.locator("(//button[contains(@class,'btn btn-primary-dark')])[2]");
         this.partner_field = page.locator("(//label[normalize-space(text())='Partner']/following::input)[1]");
-        this.add_partner_button = page.locator("(//button[contains(@class,'btn btn-warning')])[3]");
-        this.NOA_field = page.locator("//body[@data-select2-id='15']");
-        this.duration = page.locator("//input[@aria-describedby='OtherAgreement_Duration2New-error']");
-        this.duration_toggle = page.getByText("Choose");
-        this.other_notes = page.locator("//textarea[@name='OtherAgreement_OthersNew']");
+        this.add_partner_button = page.locator("(//button[contains(@class,'btn btn-save-partner')])[1]");
+        this.NOA_field = page.locator("input[name='OtherAgreement.NameAgreementNew']");
+        this.duration = page.locator("#OtherAgreement_Duration2New");
+        this.duration_toggle = page.locator('#OtherAgreement_Duration1New');
+        this.other_notes = page.locator('#OtherAgreement_OthersNew');
         this.add_territory = page.locator("(//button[contains(@class,'btnAddTerritory btn')])[3]");
         this.territory_type = page.locator("//label[normalize-space(text())='Country']");
         this.territory_name = page.locator("(//input[@aria-required='true'])[2]");
         this.add_button = page.locator("(//button[contains(@class,'btn btn-save-territory')])[1]");
-
-
+        this.edit_certificate = page.locator("(//button[contains(@class,'btn btn-warning')])[1]");
+        this.edit_ID_card = page.locator("(//table[@cellspacing='0']//button)[3]");
+        this.edit_article = page.locator("(//button[contains(@class,'btn btn-warning')])[3]");
+        this.choose_file_attatchment = page.locator("(//div[@class='input-group-append pb-2']//button)[2]");
+        this.save_attachment = page.locator("//button[normalize-space(text())='Save']");
+        this.attachment_toggle = page.locator("//label[normalize-space(text())='Attachment']");
     }
 
 
